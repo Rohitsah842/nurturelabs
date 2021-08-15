@@ -1,0 +1,89 @@
+.navbar{
+    display: flex;
+    color: black;
+    width: 100%;
+    /* justify-content: space-between; */
+   
+}
+.nameIcon{
+    width: 20%;
+    display: flex;
+    text-align: center;
+    background-color: rgb(78, 1, 78);
+    color: white;
+}
+.NavbarManu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    border: 1px solid;
+    background-color: white;
+}
+.NavbarManu > h1{
+    margin-left: 74px;
+}
+.img{
+    width: 45px;
+    height: 45px;
+    margin: -18px 17px;
+}
+input{
+    height: 30px;
+    width: 326px;
+    border-radius: 12px;
+}
+.btn{
+    margin-left: -105px;
+    position: absolute;
+    background: transparent;
+    border: none;
+    padding: 4px 12px 0 8px;
+    cursor: pointer;
+}
+.icon{
+    font-size: 17px !important;
+    margin-left: 0 !important;
+    margin-top: 3px !important;
+}
+.menubar{
+    display: none;
+}
+@media only screen and (max-width:600px){
+    .nameIcon_mob-v{
+        width: 100%;
+    }
+    .menubar_mob-v{
+        display: block;
+        text-align: center;
+    }
+    .menubar_mob-v > .material-icons{
+        font-size: 40px;
+        margin: 20px;
+    }
+    .navbar_mob-v{
+        display: block;
+        width: 100%;
+
+    }
+    .NavbarMenu_mob-v{
+        width: 100%;
+        justify-content: center;
+    }
+    .NavbarMenu_mob-v > h1{
+        font-size: 15px;
+        margin-left: 0;
+    }
+    .searchBar > input{
+        width: 95%;
+    margin: 6px 0;
+    }
+    .searchBar > img{
+        width: 45px;
+    height: 45px;
+        margin-top: 0;
+    position: absolute;
+    border-radius: 50%;
+    }
+
+}

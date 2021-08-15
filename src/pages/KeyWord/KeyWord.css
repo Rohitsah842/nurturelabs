@@ -1,0 +1,66 @@
+.keyword{
+    text-align: center;
+}
+.searchFilter{
+    height: 45px;
+    width: 80%;
+    text-align: center;
+}
+.search{
+    margin-left: 23px;
+    position: absolute;
+    margin-top: 18px;
+   
+}
+.btn-save{
+    margin-top: 10px;
+    margin-left: -128px;
+    height: 35px;
+    background-color: #4c074c;
+    color: white;
+    padding: 10px;
+}
+.closebtn{
+    padding-left: 10px;
+    color: #888;
+    font-weight: bold;
+    float: right;
+    font-size: 20px;
+    cursor: pointer;
+    line-height: 1.5 !important;
+    margin-right: 0!important;
+}
+.chips{
+    z-index: 5;
+    display: inline-block;
+    padding: 0px 20px;
+    height: 36px;
+    font-size: 18px;
+    line-height: 30px;
+    border-radius: 10px;
+    background-color:rgb(80, 7, 80);
+    color: white;
+}
+.chipNo{
+    border: 1px solid;
+    padding: 0 17px;
+    font-size: 25px;
+    color: white;
+    background: #420542;
+}
+@media only screen and (max-width:600px){
+    .keyword_mob-v{
+        margin: 0;
+        width: 100%;
+    }
+    .table_mob-v{
+        margin:0 !important;
+        width: 100%;
+    }
+    .searchFilter_mob-v{
+        width:95%;
+    }
+    .keyword_mob-v > h1{
+        font-size: 20px;
+    }
+}
