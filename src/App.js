@@ -3,7 +3,7 @@ import './App.css';
 import Navbar from './Component/Navbar/Navbar';
 import SidebarMenu from './Component/SidebarMenu/SidebarMenu';
 import KeyWord from './pages/KeyWord/KeyWord';
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom"
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 import Matches from './pages/Matches/Matches';
 import ManageSource from './pages/ManageSource/ManageSource';
 import Integration from './pages/Integration/Integration';

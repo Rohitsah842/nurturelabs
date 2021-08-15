@@ -6,12 +6,12 @@ function KeyWord() {
     const [searchValue, setsearchValue] = useState("")
     const [saveval, setsaveval] = useState([])
     function filterdata(event) {
-        console.log(event.target.value)
         setsearchValue(event.target.value)
     }
     useEffect(() => {
         let savedFilterValue = localStorage.getItem('filterValue')
-        setsaveval(JSON.parse(savedFilterValue))
+        if (savedFilterValue)
+            setsaveval(JSON.parse(savedFilterValue))
     }, [])
 
     function setChip(event) {
@@ -42,14 +42,14 @@ function KeyWord() {
 
                         <div className="chips" id={index}>
                             <span>{val}</span>
-                            <span class="material-icons closebtn" onClick={() => cancel(index)}>cancel</span>
+                            <span className="material-icons closebtn" onClick={() => cancel(index)}>cancel</span>
                         </div>
                     )
                 })
                 }
             </div>
 
-            <span className="search"><span class="material-icons ">search</span></span>
+            <span className="search"><span className="material-icons ">search</span></span>
             <input type="text" value={searchValue} placeholder="Enter here filter yours" onKeyPress={setChip} onChange={filterdata} className="searchFilter searchFilter_mob-v" />
             <button className="btn-save" onClick={save}>SAVE FILTERS</button>
             <div className="table table_mob-v">

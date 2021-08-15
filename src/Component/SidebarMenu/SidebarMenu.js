@@ -54,7 +54,6 @@ function SidebarMenu() {
                 setMenuItems([...menuItems])
             }
         })
-        console.log(menuItems)
     }
     useEffect(() => {
         let currentPath = window.location.pathname
@@ -66,15 +65,12 @@ function SidebarMenu() {
         <div className="sidebar sidebar_mob-v">
             {menuItems.map((e) => {
                 return (
-                    <>
-                        <div className={`sidebarMenu ${e.isActive ? 'active' : ''}`}>
-                            <div className="sidebarContainer">
-                                <span class="material-icons">{e.icon}</span>
-                                <h3 ><Link to={e.link} onClick={setActive.bind(this, e)}>{e.title}</Link></h3>
-                            </div>
+                    <div className={`sidebarMenu ${e.isActive ? 'active' : ''}`} key={e.title}>
+                        <div className="sidebarContainer">
+                            <span className="material-icons">{e.icon}</span>
+                            <h3 ><Link to={e.link} onClick={setActive.bind(this, e)}>{e.title}</Link></h3>
                         </div>
-
-                    </>
+                    </div>
                 )
             })
             }

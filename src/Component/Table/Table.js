@@ -29,7 +29,6 @@ function Table({ filterCriteria }) {
             });
             settrackingdata(filteredData)
         } else {
-            console.log(tmp)
             settrackingdata(tmp)
         }
     }, [filterCriteria])
@@ -41,8 +40,6 @@ function Table({ filterCriteria }) {
         })
         settrackingdata(data);
     }
-
-    console.log(filterCriteria)
     return (
         <div className="table_container">
             <div className="table_title">
@@ -50,28 +47,33 @@ function Table({ filterCriteria }) {
                 <h4>The data will refresh every 5 min</h4>
             </div>
             <table>
-                <tr>
-                    <th>Keywords</th>
-                    <th></th>
-                    <th>Goal</th>
-                    <th>Matchs</th>
-                    <th>Search Status</th>
-                    <th>Delete Keyword</th>
-                </tr>
-                {
-                    trackingdata.map((el) => {
-                        return (
-                            <tr id={el.id}>
-                                <td>{el.keyword}</td>
-                                <td><span class="material-icons">search</span></td>
-                                <td>{el.goal}</td>
-                                <td>{el.matches}</td>
-                                <td>{el.search_status}</td>
-                                <td><span class="material-icons delete" onClick={() => deleteId(el.id)}>delete</span></td>
-                            </tr>
-                        )
-                    })
-                }
+                <thead>
+                    <tr>
+                        <th>Keywords</th>
+                        <th></th>
+                        <th>Goal</th>
+                        <th>Matchs</th>
+                        <th>Search Status</th>
+                        <th>Delete Keyword</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {
+                        trackingdata.map((el) => {
+                            return (
+                                <tr key={el.id}>
+                                    <td>{el.keyword}</td>
+                                    <td><span className="material-icons">search</span></td>
+                                    <td>{el.goal}</td>
+                                    <td>{el.matches}</td>
+                                    <td>{el.search_status}</td>
+                                    <td><span className="material-icons delete" onClick={() => deleteId(el.id)}>delete</span></td>
+                                </tr>
+                            )
+                        })
+                    }
+                </tbody>
+
             </table>
         </div>
     )
